@@ -2,7 +2,6 @@
 
 var User = module.parent.require('./user'),
     Topic = module.parent.require('./topics'),
-    ThreadTools = module.parent.require('./threadTools'),
     Post = module.parent.require('./posts'),
     SocketAdmins = module.parent.require('./socket.io/admin'),
     db = module.parent.require('./database'),
@@ -20,12 +19,12 @@ var User = module.parent.require('./user'),
                 Post.getPidIndex(data.pid, data.uid, function(err, index) {
 
                     console.log(index);
-
-                    if( !err && index >= limit )
-                    {   // if no error and the index >= limit -> LOCK
-                        console.log(data);
-                        console.log(err);
-                    }
+                    console.warn("actions-alter");
+                    //if( !err && index >= limit )
+                    //{   // if no error and the index >= limit -> LOCK
+                    //    console.log(data);
+                    //    console.log(err);
+                    //}
 
                 });
 
