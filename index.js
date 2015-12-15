@@ -5,7 +5,9 @@
             parsePost: function(data, callback) {
                 if (data && data.postData && data.postData.content) {
                     //data.postData.content = parser.render(data.postData.content);
-                    console.log(data.postData);
+                    console.log("get data:");
+                    console.log(data);
+
                 }
                 callback(null, data);
                 //Post.getPidIndex(data.pid, data.uid, function(err, index) {

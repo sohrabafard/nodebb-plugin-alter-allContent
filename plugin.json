@@ -5,6 +5,6 @@
   "url": "https://github.com/sohrabafard/nodebb-plugin-alter-allContent",
   "library": "./index.js",
   "hooks": [
-    { "hook": "filter:parse.post", "method": "parsePost", "priority": 5 }
+    { "hook": "filter:post.get", "method": "parsePost" }
   ]
 }
