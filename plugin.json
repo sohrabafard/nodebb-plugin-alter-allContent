@@ -5,6 +5,7 @@
   "url": "https://github.com/sohrabafard/nodebb-plugin-alter-allContent",
   "library": "./library.js",
   "hooks": [
+    { "hook": "filter:user.updateProfile", "method": "controlledUpdateProfile", "callbacked": true },
     { "hook": "action:post.save", "method": "hooks.actions.alter", "callbacked": true }
   ]
 }
