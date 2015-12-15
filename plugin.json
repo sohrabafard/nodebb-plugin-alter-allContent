@@ -5,6 +5,13 @@
   "url": "https://github.com/sohrabafard/nodebb-plugin-alter-allContent",
   "library": "./index.js",
   "hooks": [
-    { "hook": "filter:post.get", "method": "hooks.filters.getPosts" }
+    {
+      "hook": "filter:post.get",
+      "method": "hooks.filters.getPosts"
+    },
+    {
+      "hook": "static:app.load",
+      "method": "hooks.statics.load"
+    }
   ]
 }

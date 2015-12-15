@@ -1,17 +1,6 @@
-var pkg = require('../package.json'),
-    fs = require('fs-extra'),
-    _ = require('underscore'),
-    path = require('path'),
-
-    winston = module.parent.require('winston'),
-    nconf = module.parent.require('nconf'),
-    async = module.parent.require('async'),
-    meta = module.parent.require('./meta'),
-    sockets = module.parent.require('./socket.io'),
-    utils = require(path.join(__dirname, '/../public/js/utils.js'));
 (function (Plugin) {
     'use strict';
-    console.log("Alter Plugin");
+    console.warn("Alter Plugin");
     //NodeBB list of Hooks: https://github.com/NodeBB/NodeBB/wiki/Hooks
     Plugin.hooks = {
         filters: {
@@ -21,9 +10,15 @@ var pkg = require('../package.json'),
              * @param callback {function}
              */
             getPosts : function (payload, callback) {
-                console.log("get data:");
+                console.warn("filters.getPosts");
             }
-        }
+        },
+        statics: {
+            load: function(params, callback) {
+                console.warn("statics.load");
+            }
+        },
+        actions: {}
 
     };
 })(module.exports);
