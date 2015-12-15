@@ -10,26 +10,23 @@ var User = module.parent.require('./user'),
 
 (function(Plugin) {
 
-    Plugin.hooks = {
-        filters: {},
-        statics: {},
-        actions: {
-            alter : function (data, callback) {
-                var limit = 45;
-                Post.getPidIndex(data.pid, data.uid, function(err, index) {
+    Plugin.alter = function (data, callback) {
+        var limit = 45;
+        console.warn("alter");
+        console.log(index);
 
-                    console.log(index);
-                    console.warn("actions-alter");
-                    //if( !err && index >= limit )
-                    //{   // if no error and the index >= limit -> LOCK
-                    //    console.log(data);
-                    //    console.log(err);
-                    //}
+        Post.getPidIndex(data.pid, data.uid, function(err, index) {
 
-                });
+            console.log(index);
+            console.warn("actions-alter");
+            //if( !err && index >= limit )
+            //{   // if no error and the index >= limit -> LOCK
+            //    console.log(data);
+            //    console.log(err);
+            //}
 
-            }
-        }
+        });
+
     };
 
 })(module.exports);

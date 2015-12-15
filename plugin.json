@@ -6,6 +6,6 @@
   "library": "./library.js",
   "hooks": [
     { "hook": "filter:user.updateProfile", "method": "controlledUpdateProfile", "callbacked": true },
-    { "hook": "action:post.save", "method": "hooks.actions.alter", "callbacked": true }
+    { "hook": "action:post.save", "method": "alter", "callbacked": true }
   ]
 }
