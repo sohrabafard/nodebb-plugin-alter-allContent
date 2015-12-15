@@ -3,9 +3,17 @@
   "name": "NodeBB Alter posts",
   "description": "run a javascript codes on all existing post",
   "url": "https://github.com/sohrabafard/nodebb-plugin-alter-allContent",
-  "library": "./library.js",
+  "library": "./index.js",
   "hooks": [
     { "hook": "filter:user.updateProfile", "method": "controlledUpdateProfile", "callbacked": true },
-    { "hook": "action:post.save", "method": "alter", "callbacked": true }
-  ]
+    { "hook": "action:post.save", "method": "savePost", "callbacked": true },
+  ],
+  "scripts": [
+    "public/js/client.js",
+    "public/js/admin.js"
+  ],
+  "staticDirs": {
+    "styles": "public/styles",
+    "js": "public/js"
+  },
 }
