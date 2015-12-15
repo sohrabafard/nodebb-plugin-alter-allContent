@@ -1,27 +1,17 @@
-(function() {
-    "use strict";
-    var parser,
-        runScript = {
-            parsePost: function(data, callback) {
-                if (data && data.postData && data.postData.content) {
-                    //data.postData.content = parser.render(data.postData.content);
-                    console.log("get data:");
-                    console.log(data);
-
-                }
-                callback(null, data.toSource());
-                //Post.getPidIndex(data.pid, data.uid, function(err, index) {
-                //
-                //    console.log(index);
-                //    console.warn("actions-alter");
-                //    //if( !err && index >= limit )
-                //    //{   // if no error and the index >= limit -> LOCK
-                //    //    console.log(data);
-                //    //    console.log(err);
-                //    //}
-                //
-                //});
+(function (Plugin) {
+    'use strict';
+    //NodeBB list of Hooks: https://github.com/NodeBB/NodeBB/wiki/Hooks
+    Plugin.hooks = {
+        filters: {
+            /**
+             * Hook to render topic thread
+             * @param payload {object} Fields: {posts: posts, uid: uid}
+             * @param callback {function}
+             */
+            getPosts : function (payload, callback) {
+                console.log("get data:");
             }
+        }
+
     };
-    module.exports = runScript;
-})();
+})(module.exports);
