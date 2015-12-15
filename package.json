@@ -1,0 +1,26 @@
+{
+  "name": "NodeBB Alter posts",
+  "version": "0.0.0",
+  "description": "run a javascript codes on all existing post",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sohrabafard/nodebb-plugin-alter-allContent"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "tagstitle",
+    "shell"
+  ],
+  "author": {
+    "name": "Sohrab a fard",
+    "email": "sohrab.a.fard@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sohrabafard/nodebb-plugin-alter-allContent"
+  },
+  "nbbpm": {
+        "compatibility": "^0.7.1 || ^0.8.0"
+    }
+}
