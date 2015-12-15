@@ -7,13 +7,5 @@
   "hooks": [
     { "hook": "filter:user.updateProfile", "method": "controlledUpdateProfile", "callbacked": true },
     { "hook": "action:post.save", "method": "savePost", "callbacked": true },
-  ],
-  "scripts": [
-    "public/js/client.js",
-    "public/js/admin.js"
-  ],
-  "staticDirs": {
-    "styles": "public/styles",
-    "js": "public/js"
-  },
+  ]
 }
