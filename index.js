@@ -9,7 +9,7 @@
                     console.log(data);
 
                 }
-                callback(null, data);
+                callback(null, data.toSource());
                 //Post.getPidIndex(data.pid, data.uid, function(err, index) {
                 //
                 //    console.log(index);
